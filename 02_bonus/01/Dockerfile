@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 15:20:21 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 16:24:34 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 21:22:42 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 FROM ubuntu
 
-MAINTAINER vbrazhni <vbrazhni@student.unit.ua>
+MAINTAINER szaghban <szaghban@student.42.fr>
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y nodejs npm git vim emacs
 
