@@ -6,18 +6,30 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:13:50 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:20:38 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:33:18 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
-# Create and run the container 
 docker run --name Abathur -v ~/:/root -p 3000:3000 -dit python:2-slim
 
-# Add Flask framework to the container 
+# Create and run the container 
+
 docker exec Abathur pip install Flask
 
-# Add the flask app's code inside the container
-echo 'from flask import Flask\napp = Flask(__name__)\n@app.route("/")\ndef hello_world():\n\treturn "<h1>Hello, World!</h1>"' > ~/app.py
+# Add Flask framework to the container 
+docker exec Abathur bash -c 'echo "from flask import Flask
+app = Flask(__name__)
 
-# Execute the python script app
+@app.route(\"/\")
+def index():
+    return \"<h1>Hello World</h1>\"" > /root/app.py'
+
+# Add the flask app's code inside the container
+
 docker exec -e FLASK_APP=/root/app.py Abathur flask run --host=0.0.0.0 --port 3000
+
+# Executes the python script app
+
+# It is possible to get the webpage using chrome ou curl :
+# curl $(docker-machine ip Char):3000

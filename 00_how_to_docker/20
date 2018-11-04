@@ -6,8 +6,13 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:21:49 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:21:53 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:36:03 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker swarm init --advertise-addr $(docker-machine ip Char)
+
+# Initialise a swarm with IP Adress of 'Char'
+# It is possible to verify the 'swarm' informations using:
+# docker info | grep -A22 -i Swarm

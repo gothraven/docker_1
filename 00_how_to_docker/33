@@ -6,8 +6,13 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:54:14 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:54:18 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 18:05:14 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
-docker rmi $(docker images -a -q)
+docker rmi $(docker images -aq)
+
+# Deletes all the images
+# rm -f     deletes one or muiltiple images with force quite
+# ls -aq    lists all the ids of the active or not images

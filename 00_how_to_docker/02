@@ -6,8 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:55:43 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:55:46 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 16:53:18 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker-machine ip Char
+
+# Obtain the IP Adress of the VM named 'Char'

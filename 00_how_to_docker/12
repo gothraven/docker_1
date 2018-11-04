@@ -6,8 +6,18 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:01:01 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:02:23 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:20:22 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker run -d --name spawning-pool --restart=on-failure:10 -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql mysql --default-authentication-plugin=mysql_native_password
+
+# Launches a mysql container with all the basic configurations needed
+# -d        background task
+# -e        defines an env variable
+# -v        creates a mount point between the container and the docker volume
+# --restart 'on-failure' restart the container everytime it exists because of an error
+
+# you can verify the results with :
+# docker exec -t spawning-pool mysql -uroot -pKerrigan zerglings -e "show databases;"

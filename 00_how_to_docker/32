@@ -6,8 +6,13 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:53:37 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:53:41 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 18:03:59 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
-docker rm -f $(docker ps -a -q)
+docker rm -f $(docker ps -aq)
+
+# Deletes all the containers
+# rm -f     deletes one or more containers with force quite
+# ps -aq    listes all the ids of the active or not containers

@@ -1,16 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    18                                                 :+:      :+:    :+:    #
+#    27                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/04 14:11:57 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 17:29:13 by szaghban         ###   ########.fr        #
+#    Created: 2018/11/04 16:46:07 by szaghban          #+#    #+#              #
+#    Updated: 2018/11/04 17:53:47 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
 
-docker restart overlord
+docker service logs -f $(docker service ps engineering-bay -f node=Char -q)
 
-# Restarts the 'overlord' container
+# Gives the logs of one task in the 'engineering-bay' service
+# docker logs -f          give logs
+# docker ps -f node=Char  shows 'tasks' 'engineering-bay' executed by the 'node' Char
+# docker ps -q            shows only the 'task' with the id engineering-bay

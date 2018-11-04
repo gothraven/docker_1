@@ -6,8 +6,15 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 14:26:11 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 14:26:17 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:44:49 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker-machine ssh Aiur "docker swarm join --token $(docker swarm join-token worker -q) $(docker-machine ip Char):2377"
+
+# docker ssh Aiur "COMMANDE"             connects to the 'Aiur' container and executes the COMMANDE
+# $(docker swarm join-token -q worker)   returns the key to join a swarm as a worker
+# $(docker-machine ip Char)              returns the IP Address of the VM 'Char'
+# It is possible to verify the informations of the 'Aiur' swarm using:
+# docker-machine ssh Aiur "docker info | grep -A5 -i Swarm"

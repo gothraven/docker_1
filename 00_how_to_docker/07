@@ -6,8 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:56:42 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:56:44 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:03:06 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker inspect -f '{{.NetworkSettings.IPAddress}}' overlord
+
+# Obtains the IP Adress of the container named 'overlord'

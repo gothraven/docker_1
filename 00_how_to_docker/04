@@ -6,8 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:56:06 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:56:09 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 16:55:39 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker pull hello-world
+
+# Downloads the container of hello-world from the Docker-Hub

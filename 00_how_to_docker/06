@@ -6,8 +6,19 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:56:27 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:56:28 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:01:40 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker run -d -p 5000:80 --name overlord --restart=always nginx
+
+# Launches the container 'nginx' with the name 'overlord'
+# run         launches the container
+# -d          launches the container in the background (opposite of -it)
+# -p          redirect the port 80 of 'nginx' to the port 5000 of the VM host
+# --name      name the container, in our case 'overlord'
+# --restart   defines the rule by default to apply on the container
+
+# curl $(docker-machine ip Char):5000
+# To get the result of the container

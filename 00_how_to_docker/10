@@ -6,8 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:58:21 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:58:34 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 17:13:38 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker volume create --name hatchery
+
+# Creates a volume named 'hatchery'

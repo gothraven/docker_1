@@ -6,8 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 13:56:16 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:56:20 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 16:56:15 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#!/bin/bash
 
 docker run hello-world
+
+# Launchs the hello-world container
