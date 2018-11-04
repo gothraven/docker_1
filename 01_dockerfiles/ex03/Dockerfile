@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 15:11:59 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 21:44:01 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 22:39:01 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,4 @@ ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure
 # docker-machine create -d virtualbox --virtualbox-memory 2048 --virtualbox-cpu-count 2 default
 
 # docker build -t ex03 .
-# docker container run -it --privileged  \
-#       --hostname gitlab.example.com \
-#       --publish 443:443 \
-#       --publish 80:80 \
-#       --publish 2222:22 \
-#       --name c2222 \
-#       --restart always \
-#       --env docker_engine_ip="192.168.99.101" \
-#       ex03
+# docker run -it -rm -p 8080:80 -p 8022:22 -p 8443:443 --privileged ex03
