@@ -1,13 +1,13 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    01                                                 :+:      :+:    :+:    #
+#    22                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/04 13:55:23 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 13:55:35 by szaghban         ###   ########.fr        #
+#    Created: 2018/11/04 14:26:11 by szaghban          #+#    #+#              #
+#    Updated: 2018/11/04 14:26:17 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-docker-machine create --driver virtualbox Char
+docker-machine ssh Aiur "docker swarm join --token $(docker swarm join-token worker -q) $(docker-machine ip Char):2377"
