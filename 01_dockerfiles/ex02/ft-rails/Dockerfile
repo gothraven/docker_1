@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 15:09:14 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 18:52:59 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 19:11:16 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,4 +25,4 @@ ONBUILD RUN bundle install
 ONBUILD RUN rake db:migrate
 ONBUILD RUN rake db:seed
 
-# docker build -t ruby-n-rails:on-build .
+# docker build -t ft-rails:on-build .

@@ -6,11 +6,11 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 15:03:16 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 15:04:33 by szaghban         ###   ########.fr        #
+#    Updated: 2018/11/04 18:48:58 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FROM ft-rails:on-build
+FROM ruby-n-rails:on-build
 
 EXPOSE 3000
 CMD [ "rails" , "s", "-b", "0.0.0.0", "-p", "3000"]
