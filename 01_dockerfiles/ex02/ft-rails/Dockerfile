@@ -14,8 +14,8 @@ FROM ruby
 
 MAINTAINER szaghban <szaghban@student.42.fr>
 
-RUN apt-get update -y && \
-    apt-get install -y build-essential libpq-dev nodejs sqlite3
+RUN apt-get update -y
+RUN apt-get install -y build-essential libpq-dev nodejs sqlite3
 
 ONBUILD COPY app /opt/app
 ONBUILD WORKDIR /opt/app
