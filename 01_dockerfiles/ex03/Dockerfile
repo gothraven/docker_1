@@ -27,7 +27,7 @@ RUN apt-get install -y gitlab-ce
 RUN apt update && apt install -y tzdata
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure
+ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && tail -f /dev/null
 
 # Get more space in the VM before using the Dockerfile
 # docker-machine create --driver virtualbox --virtualbox-memory 4096 --virtualbox-cpu-count 2 Char
