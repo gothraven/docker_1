@@ -14,5 +14,5 @@
 docker rmi $(docker images -aq)
 
 # Deletes all the images
-# rm -f     deletes one or muiltiple images with force quite
-# ls -aq    lists all the ids of the active or not images
+# docker rmi           deletes one or muiltiple images with force quite
+# docker images -aq    lists all the ids of the active or not images

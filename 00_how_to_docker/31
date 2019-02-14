@@ -14,5 +14,5 @@
 docker service rm $(docker service ls -q)
 
 # Deletes all services
-# rm      deletes one or muiltiple services
-# ls -a   lists all the ids of services
+# docker service rm         Remove one or more services
+# docker service ls -q      --quite Only display IDs

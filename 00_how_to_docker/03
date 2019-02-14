@@ -13,5 +13,5 @@
 
 eval $(docker-machine env Char)
 
-# Exports then env variables variables of the VM 'Char'
+# Exports the env variables of the VM 'Char'
 # env | grep DOCKER

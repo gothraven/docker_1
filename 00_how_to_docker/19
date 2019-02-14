@@ -13,11 +13,11 @@
 
 docker run --name Abathur -v ~/:/root -p 3000:3000 -dit python:2-slim
 
-# Create and run the container 
+# Create and run the container
 
 docker exec Abathur pip install Flask
 
-# Add Flask framework to the container 
+# Add Flask framework to the container
 docker exec Abathur bash -c 'echo "from flask import Flask
 app = Flask(__name__)
 
