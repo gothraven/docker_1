@@ -10,14 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Ubuntu Container for nodejs prjects using yarn instead of npm
+# Ubuntu Container for Ocaml projects
 
 FROM ubuntu
 
 MAINTAINER szaghban <szaghban@student.42.fr>
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y nodejs npm git vim
-RUN npm install yarn --global && npm install npm --global
+RUN apt-get update && apt-get upgrade -y && apt-get install -y ocaml git vim
 
-# docker build -t b01 .
-# docker run --rm -ti b01
+# docker build -t b03 .
+# docker run --rm -ti b03
