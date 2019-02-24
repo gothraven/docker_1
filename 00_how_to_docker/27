@@ -6,12 +6,12 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 16:46:07 by szaghban          #+#    #+#              #
-#    Updated: 2018/11/04 17:53:47 by szaghban         ###   ########.fr        #
+#    Updated: 2019/02/24 18:06:54 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
 
-docker service logs -f $(docker service ps engineering-bay -f node=Char -q)
+docker service logs -f $(docker service ps engineering-bay -f node=Char -q | head -n1)
 
 # Gives the logs of one task in the 'engineering-bay' service
 # docker logs -f          give logs
